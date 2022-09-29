@@ -2,3 +2,21 @@ html, body {
   height: 100%;
   width: 100%;
 }
+ul {
+  list-style: none;
+  overflow: hidden; 
+}
+
+li{
+  display: inline;
+}
+/* https://fonts.google.com/ 
+https://fonts.google.com/icons
+Friday Beach
+Gill Sans Ultra Bold Condensed
+#FFC700
+*/
+.navegacion{
+
+  background-color: #FFC700;
+}
