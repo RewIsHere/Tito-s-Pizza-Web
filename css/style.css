@@ -1,22 +1,77 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	/* es para sacar los valores predeterminados del navegador */
+}
+
 html, body {
   height: 100%;
   width: 100%;
 }
-ul {
-  list-style: none;
-  overflow: hidden; 
+
+@font-face {
+  font-family: "Friday Beach";
+  src: url("/assets/Friday.ttf");
 }
 
-li{
-  display: inline;
+.Eslogan {
+  font-family: "Friday Beach", serif;
 }
+
+
 /* https://fonts.google.com/ 
 https://fonts.google.com/icons
 Friday Beach
 Gill Sans Ultra Bold Condensed
 #FFC700
 */
-.navegacion{
 
+/*AQUI EMPIEZA LOS ESTILOS DE LÑA BARRA DE NAVEGACION*/
+
+header{
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
   background-color: #FFC700;
+  align-items: center;
+  padding: 10px;
 }
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-family: "Friday Beach", serif;
+  font-size: 40px;
+}
+
+.logo img{
+  height: 65px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.listas{
+  display: inline-block;
+  color: black;
+  padding: 6px;
+}
+
+.listas a{
+  color: black;
+  text-decoration: none;
+  margin-left: 6px;
+  margin-right: 5px;
+  
+}
+
+.navegacion{
+  margin-right: 25px;
+}
+
+/*AQUI TERMINA LA BARRA DE NAVEGACION*/
+
+/*-----------------*/
+/*-----------------*/
+/*-----------------*/
+
+/*INICIA PIE DE PAGINA*/
