@@ -7,35 +7,35 @@
 html, body {
   height: 100%;
   width: 100%;
+  background-color: #000000;
+  background-image: url("/assets/Fondo.png");
+  background-position-x: center;
+  background-size: contain;
+  color:#FFFFFF;
 }
+
 
 @font-face {
   font-family: "Friday Beach";
   src: url("/assets/Friday.ttf");
+
+  /*Agrega una fuente personalizada de un directorio local*/
 }
 
 .Eslogan {
   font-family: "Friday Beach", serif;
 }
 
-
-/* https://fonts.google.com/ 
-https://fonts.google.com/icons
-Friday Beach
-Gill Sans Ultra Bold Condensed
-#FFC700
-*/
-
 /*AQUI EMPIEZA LOS ESTILOS DE LÑA BARRA DE NAVEGACION*/
 
-header{
+/*header{
   display: flex;
   height: 70px;
   justify-content: space-between;
   background-color: #FFC700;
   align-items: center;
   padding: 10px;
-}
+}*/
 
 .logo{
   display: flex;
@@ -64,9 +64,60 @@ header{
   
 }
 
-.navegacion{
-  margin-right: 25px;
+.rappi {
+  background-image: url("https://tvpacifico.mx/recetas/intranet/images/recipes/506-544.jpg");
+  background-size: cover;
+  height: 800px;
 }
+
+.movil{
+  width: 1000px;
+}
+
+.navegacion{
+
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  background-color: #FFC700;
+  justify-content: center;
+}
+
+.navegacion li {
+  list-style: none;
+}
+/*VISTA EN TABLET*/
+
+
+/*VISTA DE ESCRITORIO*/
+@media all and (min-width: 960px) {
+.navegacion ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.navegacion a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navegacion a:hover {
+  color: #e8e8e8;
+}
+
+
 
 /*AQUI TERMINA LA BARRA DE NAVEGACION*/
 
