@@ -71,7 +71,7 @@ html, body {
 }
 
 .movil{
-  width: 1000px;
+  width: 350px;
 }
 
 .navegacion{
@@ -86,6 +86,11 @@ html, body {
 
 .navegacion li {
   list-style: none;
+}
+
+
+.contenido{
+  overflow: auto;
 }
 /*VISTA EN TABLET*/
 
