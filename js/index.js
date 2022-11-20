@@ -38,10 +38,10 @@ function chooseSlide(n) {
 }
 
 function showMenu() {
-  var topNav = document.getElementById('topnave');
-  if (topNav.className === "navegacion") {
+  var topNav = document.getElementById('topnav');
+  if (topNav.className === "navbar") {
     topNav.className += " show";
   } else {
-    topNav.className = "navegacion";
+    topNav.className = "navbar";
   }
 }

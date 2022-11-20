@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/pruebas.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="topnav" class="navbar">
+    <a href="#" class="logo">
+      TUAT
+      <span style="color: red">TA</span>
+    </a>
+    <div class="navbar-right menu">
+      <a href="#" class="active">
+        Home
+      </a>
+      <a href="#">
+        About
+      </a>
+      <a href="#">
+        Menu
+      </a>
+      <a href="#">
+        Chefs
+      </a>
+      <a href="#">
+        Contact
+      </a>
+    </div>
+    <div class="navbar-right">
+      <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="slideshow-container" class="slideshow-container">
+    <div class="slide-item bgimg fade" style="background-image: url('assets/bg_slider1.png');">
+
+    </div>
+
+    <div class="slide-item bgimg fade" style="background-image: url('assets/bg_slider2.jpg');">
+
+    </div>
+
+    <div class="slide-item bgimg fade" style="background-image: url('assets/bg_slider3.jpg');">
+
+    </div>
+
+    <div id="slide-control" class="slide-control">
+      <span class="dot" onclick="chooseSlide(0)"></span>
+      <span class="dot" onclick="chooseSlide(1)"></span>
+      <span class="dot" onclick="chooseSlide(2)"></span>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
