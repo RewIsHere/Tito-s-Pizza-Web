@@ -43,7 +43,7 @@ html, body {
 
 @font-face {
   font-family: "Friday Beach";
-  src: url("./assets/Friday.ttf");
+  src: url("assets/Friday.ttf");
 
   /*Agrega una fuente personalizada de un directorio local*/
 }
