@@ -2,13 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Rubik:wght@700&display=swap');
 @import url('https://css.gg/details-more.css');
-
-/* IMPORTA LAS TIPOGRAFIAS E ICONOS */
-
 * {
 	padding: 0px;
 	margin: 0px;
-	/* REINICIA LOS VALORES POR DEFECTO DEL NAVEGADOR */
+	/* es para sacar los valores predeterminados del navegador */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #111111 !important;
+  /*background-image: url("/assets/Fondo.png");*/
+  background-position-x: center;
+  background-size: contain;
+  color:#FFFFFF !important;
 }
 
 :root {
@@ -19,27 +26,7 @@
   --colorPrimario: #ffc700;
   --colorSecundario: #FFFFFF;
   --colorTerciario: #a50000;
-  --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
-  --spacing-s: 8px;
-  --spacing-m: 16px;
-  --spacing-l: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 64px;
-  --width-container: 900px;
   /* VARIABLES GLOBALES DEL DOCUMENTO */
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  background-color: var(--colorFondo) !important;
-  /*background-image: url("/assets/Fondo.png");*/
-  background-position-x: center;
-  background-size: contain;
-  color:#FFFFFF !important;
-  font-family: 'Rubik', sans-serif !important;
 }
 
 @font-face {
@@ -57,6 +44,14 @@ a:hover {
   color: #FFFFFF !important;
 }
 
+ h1{
+  padding: 10px;
+  color:  #ffc700;
+  font-size: 45px;
+  text-align: center;
+  font-family: "Friday Beach", serif;
+  margin-top: 10px;
+}
 /*-------------------------------*/
 /* ESTILOS DEL MENU DE NAVEGACION*/
 /*-------------------------------*/
@@ -116,88 +111,169 @@ a:hover {
 /* FIN DE ESTILOS DEL MENU DE NAVEGACION */
 /*---------------------------------------*/
 
-#title{
-  text-align: center;
-  font-size: 40px;
-  font-family: "Friday Beach", serif;
-}
-.sucursales-title{
-  color: var(--colorPrimario);
+/*contenido*/
+.menu-title{
   margin-top: 12%;
 }
 
-.poza{
+.menu-selector{
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.papantla{
+.menu-selector__grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 40%;
+}
+
+@media(min-width: 540px){
+  .menu-selector__grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .menu-selector__grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+.menu-selector__container{
+  height: 80%;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-bottom: 0%;
+  padding-left: 10%;
+  margin: 0% 5% 5% 5%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.tuxpan{
+button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Berlin Sans FB Demi', sans-serif !important;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px !important;
+  background: var(--colorPrimario);
+  border: 1px solid transparent;
   display: flex;
-  justify-content: center;
   align-items: center;
+  font-size: 18px !important;
+  width: 131px;
+  height: 42px;
+  justify-content: center;
 }
-h1{
-  text-align: center;
-  color: black;
-  font-size: 40px;
-  font-family: "Friday Beach";
-  src: url("/assets/Friday.ttf");
+button:hover {
+  background: #b5941c;
+  color: var(--white);
 }
-
-p{
-  text-align: center;
-  color: black;
-  font-size: 20px;
+button:active {
+  transform: scale(0.95);
 }
 
-article{
-  background-color: rgba(255, 229, 0, 1);
-  margin: 10px;
-  width: 70%;
-  border-radius: 15px;
+.button--active{
+  background: #b5941c;
+  color: var(--white);
 }
-
-h4{
-  text-align: center;
-  color: black;
-  font-size: 20px;
+/*
+.menu-section {
+  display: flex;
+  align-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+  flex-direction: row;
 }
+*/
 
+/*ESTILOS DE LOS EXTRAS*/
+.menu-section{
+  margin-bottom: 10%;
+  margin-top: 4%;
+}
 h3{
   text-align: center;
-  color: rgba(193, 177, 35, 0.8)
-  font-size: 20px;
+  margin-bottom:2%;
+  color: #ffc700;
+  font-family: "Friday Beach", serif;
+}
+hr{
+  color:#ffc700;
+  align-content: center;
+  margin-bottom: 2%;
+}
+h4{
+  text-align: center;
+  margin-bottom: 5;
+  color:#ffc700;
+  display: grid;
+  margin: 0.5% 0% 0% 0%;
+  font-family: 'Berlin Sans FB Demi', sans-serif !important;
 }
 
-img{
-  display: block;
-  margin: 0 auto;
+.titulo4{
+  margin-bottom: 2%;
+}
+h5{
+  text-align: center;
+  margin: 1%;
+  font-family: 'Berlin Sans FB Demi', sans-serif !important;
 }
 
-.pie{
-   justify-content: center;
-  color: cyan;
+table{
+  margin: auto;
+  width: 70%;
+  font-family: 'Berlin Sans FB Demi', sans-serif !important;
 }
 
-.links {
+td{
+  border-spacing: 10%;
+}
+
+.menu-section__menu-grid{
+  width: 25%;
+}
+
+.conteiner-card{
+  width: 100%;
   display: flex;
-  justify-content: center;
+  max-width: 100%;
   align-items: center;
+  align-content: center;
 }
 
-/*--------------------*/
-/* ESTILOS DEl FOOTER */
-/*--------------------*/
+.cards-extras{
+  width: 23%;
+  margin: 7%;
+  overflow:hidden;
+  background:#ffc700;
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.cards-extras:hover{
+  box-shadow: 5px 5 px 20px rgba(;
+  transform: translateY(-3%);
+}
+
+.cards-extras img{
+  width: 100%;
+}
+
+.cards-extras__titulo{
+  color:black;
+  font-weight: 70%;
+  font-size: 13px;
+}
+
+/*PIE DE PAGINA*/
+
 footer{
     width: 100%;
     padding: 50px 0px;
-    background-image: url("/assets/titospie.svg");
+    background-image: url("/assets/FooterBG.svg");
     background-size: cover;
     margin-top: 120px;
 }
@@ -265,13 +341,9 @@ footer{
     background-color: #7a7a7a;
 }
 
-/*---------------------------*/
-/* FIN DE ESTILOS DEl FOOTER */
-/*---------------------------*/
-
 @media screen and (max-width: 600px) {
 
-  /*NAVEGACION MOVIL*/
+/*NAVEGACION MOVIL*/
   .navegacion {
 		padding: 10px;
 	}
@@ -294,8 +366,20 @@ footer{
 	.navegacion.show .navegacion__menu a {
 		width: 100%;
 	}
-  iframe{
-    width: 70%;
-    
+  
+  .container{
+    box-sizing: border-box;
+    float: left;
+    width: 21%;
+    padding: 0;
+    margin: 0% 2% 2% 2%;
+  }
+
+  .contenido{
+  font-size: 10px;
+}
+
+  h2{
+    font-size: 12px;
   }
 }

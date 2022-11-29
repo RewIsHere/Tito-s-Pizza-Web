@@ -1,47 +1,41 @@
-var slideIndex = 0;
+addEventListener('scroll', function() {
+  let header = document.getElementById('header');
+  let innerheader = document.getElementById('innerheader');
+  let nav = document.getElementById('nav').children;
+  let logotext = document.getElementById('logotext');
+  let line1 = document.getElementsByClassName('line1');
+  let line2 = document.getElementsByClassName('line2');
+  let line3 = document.getElementsByClassName('line3');
 
-showSlide();
+  if (document.documentElement.scrollTop > 199) {
+    header.style.backgroundColor = 'rgba(14,53,120,1)'
+    header.style.height = '80px'
+    header.style.boxShadow = '0px 0px 10px .5px #000000'
+    innerheader.style.backgroundColor = 'rgba((14,53,120,1))'
+    for (var i = 0; i < nav.length; i++) {
+      nav[i].style.color = '#FFFFFF'
+    }
+    logotext.style.color = '#FFFFFF'
+    line1[0].style.backgroundColor = '#FFFFFF'
+    line2[0].style.backgroundColor = '#FFFFFF'
+    line3[0].style.backgroundColor = '#FFFFFF'
 
-var timer = setInterval(showSlide, 5000);
-
-var slideContainer = document.getElementById('slideshow-container');
-var slideControl = document.getElementById('slide-control');
-
-slideControl.onmouseover = function() {
-  clearInterval(timer);
-}
-
-slideControl.onmouseleave = function() {
-  timer = setInterval(showSlide, 5000);
-}
-
-function showSlide() {
-  var i;
-  var slides = document.getElementsByClassName('slide-item');
-  var dots = document.getElementsByClassName('dot');
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-function chooseSlide(n) {
-  slideIndex = n;
-  showSlide();
-  clearInterval(timer);
-}
-
-function showMenu() {
-  var topNav = document.getElementById('topnav');
-  if (topNav.className === "navbar") {
-    topNav.className += " show";
   } else {
-    topNav.className = "navbar";
+    header.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+    header.style.height = '100px'
+    header.style.boxShadow = 'none'
+    innerheader.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+    for (var i = 0; i < nav.length; i++) {
+      nav[i].style.color = '#000000'
+    }
+    logotext.style.color = '#000000'
+    line1[0].style.backgroundColor = '#000000'
+    line2[0].style.backgroundColor = '#000000'
+    line3[0].style.backgroundColor = '#000000'
   }
+});
+
+function transform(x) {
+  x.classList.toggle("change")
 }
+

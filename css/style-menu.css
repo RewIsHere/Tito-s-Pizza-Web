@@ -3,12 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@600&family=Rubik:wght@700&display=swap');
 @import url('https://css.gg/details-more.css');
 
-/* IMPORTA LAS TIPOGRAFIAS E ICONOS */
-
 * {
 	padding: 0px;
 	margin: 0px;
-	/* REINICIA LOS VALORES POR DEFECTO DEL NAVEGADOR */
+	/* es para sacar los valores predeterminados del navegador */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #111111 !important;
+  background-position-x: center;
+  background-size: contain;
+  color:#FFFFFF !important;
+  font-family: 'Rubik', sans-serif !important;
 }
 
 :root {
@@ -19,27 +27,7 @@
   --colorPrimario: #ffc700;
   --colorSecundario: #FFFFFF;
   --colorTerciario: #a50000;
-  --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
-  --spacing-s: 8px;
-  --spacing-m: 16px;
-  --spacing-l: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 64px;
-  --width-container: 900px;
   /* VARIABLES GLOBALES DEL DOCUMENTO */
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  background-color: var(--colorFondo) !important;
-  /*background-image: url("/assets/Fondo.png");*/
-  background-position-x: center;
-  background-size: contain;
-  color:#FFFFFF !important;
-  font-family: 'Rubik', sans-serif !important;
 }
 
 @font-face {
@@ -57,6 +45,14 @@ a:hover {
   color: #FFFFFF !important;
 }
 
+ h1{
+  padding: 10px;
+  color:  #ffc700;
+  font-size: 45px;
+  text-align: center;
+  font-family: "Friday Beach", serif;
+  margin-top: 10px;
+}
 /*-------------------------------*/
 /* ESTILOS DEL MENU DE NAVEGACION*/
 /*-------------------------------*/
@@ -116,80 +112,145 @@ a:hover {
 /* FIN DE ESTILOS DEL MENU DE NAVEGACION */
 /*---------------------------------------*/
 
-#title{
-  text-align: center;
-  font-size: 40px;
-  font-family: "Friday Beach", serif;
-}
-.sucursales-title{
-  color: var(--colorPrimario);
+/*contenido*/
+.menu-title{
   margin-top: 12%;
 }
 
-.poza{
+.menu-selector{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: var(--spacing-xxl) var(--spacing-l);
 }
 
-.papantla{
+.menu-selector__grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 40%;
+}
+
+@media(min-width: 540px){
+  .menu-selector__grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .menu-selector__grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+.menu-selector__container{
+  height: 80%;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-bottom: 0%;
+  padding-left: 10%;
+  margin: 0% 5% 5% 5%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.tuxpan{
+button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Berlin Sans FB Demi', sans-serif !important;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px !important;
+  background: var(--colorPrimario);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 18px !important;
+  width: 131px;
+  height: 42px;
+  justify-content: center;
+}
+button:hover {
+  background: #b5941c;
+  color: var(--white);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+.button--active{
+  background: #b5941c;
+  color: var(--white);
+}
+
+.menu-section {
+  align-items: flex-start;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-h1{
-  text-align: center;
-  color: black;
-  font-size: 40px;
-  font-family: "Friday Beach";
-  src: url("/assets/Friday.ttf");
+  padding: var(--spacing-xxl) var(--spacing-l);
 }
 
-p{
-  text-align: center;
-  color: black;
-  font-size: 20px;
+.menu-section__menu-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 80%;
 }
 
-article{
-  background-color: rgba(255, 229, 0, 1);
-  margin: 10px;
-  width: 70%;
-  border-radius: 15px;
+@media(min-width: 540px){
+  .menu-section__menu-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
-h4{
-  text-align: center;
-  color: black;
-  font-size: 20px;
+@media(min-width: 960px){
+  .menu-section__menu-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
 }
 
-h3{
-  text-align: center;
-  color: rgba(193, 177, 35, 0.8)
-  font-size: 20px;
+.menu-container {
+  height: 80%;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-bottom: 0%;
+  padding-left: 10%;
+  margin: 0% 5% 5% 5%;
 }
 
-img{
+.menu-container__menu-card {
+  list-style: none;
+  position: relative;
+}
+
+.menu-container__menu-card:before{
+  content: '';
   display: block;
-  margin: 0 auto;
+  width: 100%;
 }
 
-.pie{
-   justify-content: center;
-  color: cyan;
+.menu-container__nombre{
+  color: black;
+  font-size: 18px;
+  font-family: "Friday Beach", serif;
+  text-align: center;
+  background-color: #ffc700;
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu-container__contenido{
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Friday Beach", serif;
 }
+
+
+.menu-container__img img{
+  max-width: 100%; 
+}
+
 
 /*--------------------*/
 /* ESTILOS DEl FOOTER */
@@ -270,7 +331,6 @@ footer{
 /*---------------------------*/
 
 @media screen and (max-width: 600px) {
-
   /*NAVEGACION MOVIL*/
   .navegacion {
 		padding: 10px;
@@ -294,8 +354,16 @@ footer{
 	.navegacion.show .navegacion__menu a {
 		width: 100%;
 	}
-  iframe{
-    width: 70%;
-    
+  
+  .container{
+    box-sizing: border-box;
+    float: left;
+    width: 21%;
+    padding: 0;
+    margin: 0% 2% 2% 2%;
   }
+
+  .contenido{
+  font-size: 10px;
+}
 }

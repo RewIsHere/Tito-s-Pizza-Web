@@ -4,8 +4,8 @@ showSlide();
 
 var timer = setInterval(showSlide, 5000);
 
-var slideContainer = document.getElementById('slideshow-container');
-var slideControl = document.getElementById('slide-control');
+var slideContainer = document.getElementById('slide-container');
+var slideControl = document.getElementById('slide-container__slide-control');
 
 slideControl.onmouseover = function() {
   clearInterval(timer);
@@ -17,8 +17,8 @@ slideControl.onmouseleave = function() {
 
 function showSlide() {
   var i;
-  var slides = document.getElementsByClassName('slide-item');
-  var dots = document.getElementsByClassName('dot');
+  var slides = document.getElementsByClassName('slide-container__slide-item');
+  var dots = document.getElementsByClassName('slide-container__dot');
   for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
@@ -38,10 +38,27 @@ function chooseSlide(n) {
 }
 
 function showMenu() {
-  var topNav = document.getElementById('topnave');
+  var topNav = document.getElementById('navegacion-top');
   if (topNav.className === "navegacion") {
     topNav.className += " show";
   } else {
     topNav.className = "navegacion";
   }
 }
+
+function phone() {
+  location.href = "tel:7821009428";
+}
+
+function toCombos() {
+  location.href = "combos.html";
+}
+
+function toTamaños() {
+  location.href = "tamaños.html";
+}
+
+function toExtras() {
+  location.href = "extras.html";
+}
+

@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style-combos.css" rel="stylesheet" type="text/css" />
+  <link href="css/style-extras.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="assets/Logo.png">
-  <title>Tito's Pizzeria - Combos y Promociones</title>
-
+  <title>Tito's Pizzeria - Extras</title>
   <link href='https://css.gg/details-more.css' rel='stylesheet'>
+  <link
+    href="https://www.dafontfree.net/embed/Z2lsbC1zYW5zLXVsdHJhLWJvbGQtY29uZGVuc2VkLXJlZ3VsYXImZGF0YS8xMy9nLzY0ODUxL0dJTExVQkNELlRURg"
+    rel="stylesheet" type="text/css" />
   <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,7 +19,7 @@
     <div id="navegacion-top" class="navegacion">
       <ul class="navegacion__navegacion-list navegacion__menu">
         <li>
-          <a href="https://titos-pizza-web.rewishere.repl.co/">INICIO</a>
+          <a href="https://titos-pizza-web.rewishere.repl.co/" class="active">INICIO</a>
         </li>
         <li>
           <a href="sucursales.html">SUCURSALES</a>
@@ -26,7 +28,7 @@
           <a href="https://titos-pizza-web.rewishere.repl.co/"><img src="assets/Logo.png" alt="Tito's Pizza Logo"></a>
         </li>
         <li>
-          <a href="menu.html" class="active">MENU</a>
+          <a href="menu.html">MENU</a>
         </li>
         <li>
           <a href="nosotros.html">NOSOTROS</a>
@@ -54,7 +56,7 @@
         </button>
       </div>
       <div class="menu-selector__container">
-        <button class="menu-selector__button button--active">
+        <button class="menu-selector__button" onclick="toCombos()">
           <span class="menu-selector__button-text">COMBOS</span>
         </button>
       </div>
@@ -64,78 +66,99 @@
         </button>
       </div>
       <div class="menu-selector__container">
-        <button class="menu-selector__button" onclick="toExtras()">
+        <button class="menu-selector__button button--active">
           <span class="menu-selector__button-text">EXTRAS</span>
         </button>
       </div>
     </div>
   </div>
   <section class="menu-section">
-
-    <div class="menu-section__menu-grid">
-      <div class="menu-container">
-        <div class="menu-container__menu-card">
-          <div class="menu-container__nombre">
-            <h2>PATRONA</h2>
+    <hr />
+    <h4>PIZZA CON ORILLA DE QUESO (EN TODOS LOS TAMAÑOS)</h4>
+    <h4 class="titulo4">PIZZA CON BONELESS (BONELESS A LA DIABLA O BBQ)</h4>
+    <table>
+      <tr>
+        <td class="tdIzquierda">SPAGUETI A LA CREMA</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td class="tdIzquierda">SPAGUETI A LA MANTEQUILLA</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td class="tdIzquierda">SPAGUETI ROJO</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td class="tdIzquierda">PAN DE AJO</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>PAN EN GAJO</td>
+        <td>$55</td>
+      </tr>
+      <tr>
+        <td>PAPAS ESPECIALES</td>
+        <td>$75</td>
+      </tr>
+    </table>
+    <h5>(QUESO CHEDAR Y TROCITOS DE TOCINO)</h5>
+    <table>
+      <tr>
+        <td>BONELESS</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>FOCACCIA</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>AGUA DE SABOR</td>
+        <td>$25</td>
+      </tr>
+      <tr>
+        <td>AGUA NATURAL</td>
+        <td>$25</td>
+      </tr>
+      <tr>
+        <td>REFRESCO DE LATA</td>
+        <td>$25</td>
+      </tr>
+      <tr>
+        <td>REFRESCO DE 2 LITROS</td>
+        <td>$40</td>
+      </tr>
+    </table>
+    <section>
+      <div class="conteiner-card">
+        <div class="cards-extras">
+          <figure>
+            <img src="/assets/Spaghetti a la crema y a la mantequilla.jpg">
+          </figure>
+          <div class="cards-extras__titulo">
+            <h5>SPAGUETTI A LA MANTEQUILLA</h5>
           </div>
-          <figure class="menu-container__img">
-            <img src="assets/Combo1.png" </figure>
-            <div class="menu-container__contenido">
-              <p>INCLUYE: PIZZA (24 CUADRITOS) + SPAGUETTI + REFRESCO (O PAN DE AJO)</p>
-            </div>
-            <div class="menu-container__precio">
-              <p>$390.00</p>
-            </div>
+        </div>
+        <div class="cards-extras">
+          <figure>
+            <img src="/assets/papas en gajo.jpeg">
+          </figure>
+          <div class="cards-extras__titulo">
+            <h5>PAPAS EN GAJO</h5>
+          </div>
+        </div>
+        <div class="cards-extras">
+          <figure>
+            <img src="/assets/espaguetti a la crema.jpeg">
+          </figure>
+          <div class="cards-extras__titulo">
+            <h5>SPAGUETTI A LA CREMA</h5>
+          </div>
         </div>
       </div>
-      <div class="menu-container">
-        <div class="menu-container__menu-card">
-          <div class="menu-container__nombre">
-            <h2>SUPER</h2>
-          </div>
-          <figure class="menu-container__img">
-            <img src="assets/Combo4.png" </figure>
-            <div class="menu-container__contenido">
-              <p>INCLUYE: PIZZA (16 REBANADAS) + SPAGUETTI + REFRESCO (O PAN DE AJO)</p>
-            </div>
-            <div class="menu-container__precio">
-              <p>$290.00</p>
-            </div>
-        </div>
-      </div>
-      <div class="menu-container">
-        <div class="menu-container__menu-card">
-          <div class="menu-container__nombre">
-            <h2>GRANDE</h2>
-          </div>
-          <figure class="menu-container__img">
-            <img src="assets/Combo3.png" </figure>
-            <div class="menu-container__contenido">
-              <p>INCLUYE: PIZZA (12 REBANADAS) + SPAGUETTI + REFRESCO (O PAN DE AJO)</p>
-            </div>
-            <div class="menu-container__precio">
-              <p>$260.00</p>
-            </div>
-        </div>
-      </div>
-      <div class="menu-container">
-        <div class="menu-container__menu-card">
-          <div class="menu-container__nombre">
-            <h2>MEDIANA</h2>
-          </div>
-          <figure class="menu-container__img">
-            <img src="assets/Combo2.png" </figure>
-            <div class="menu-container__contenido">
-              <p>INCLUYE: PIZZA (8 REBANADAS) + SPAGUETTI + REFRESCO (O PAN DE AJO)</p>
-            </div>
-            <div class="menu-container__precio">
-              <p>$230.00</p>
-            </div>
-        </div>
-      </div>
-
+    </section>
   </section>
-    <footer>
+  <footer>
     <div class="footer-container">
       <div class="footer-container__box">
         <div class="footer-container__logo">
